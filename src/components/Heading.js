@@ -3,12 +3,10 @@ import { Spring } from "react-spring/renderprops";
 
 const Heading = () => {
   return (
-    <Spring from={{ number: 0 }} to={{ number: 1 }}>
+    <Spring from={{ opacity: 0 }} to={{ opacity: 1 }}>
       {props => (
-        <div style={props}>
-          <div>
-            <h1>{props.number.toFixed(2)}</h1>
-          </div>
+        <div style={props} className="heading">
+          <h1>Cryptocurrency Tracker</h1>
         </div>
       )}
     </Spring>
