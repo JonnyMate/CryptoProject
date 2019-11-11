@@ -10,6 +10,9 @@ class CoinFetch extends Component {
       ETH: {
         GBP: 0
       },
+      LTC: {
+        GBP: 0
+      },
       DOGE: {
         GBP: 0
       }
@@ -18,7 +21,7 @@ class CoinFetch extends Component {
 
   componentDidMount = () => {
     fetch(
-      "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,DOGE&tsyms=GBP"
+      "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DOGE&tsyms=GBP"
     )
       .then(res => res.json())
       .then(data => this.setState({ data }));
